@@ -11,54 +11,51 @@
     body {
       font-family: 'Quicksand', sans-serif;
       min-height: 100vh;
-      background: linear-gradient(180deg, #ffeef8 0%, #e8f4fc 50%, #fff9e6 100%);
+      background: #FFF5F8;
     }
     
     .invitation {
       max-width: 500px;
       margin: 0 auto;
-      background: #fff;
+      background: #FFF;
       min-height: 100vh;
       position: relative;
       overflow: hidden;
     }
     
-    /* Beautiful Rainbow Stripes at Top */
-    .rainbow-top {
-      display: flex;
-      height: 12px;
+    /* Flower Border Top */
+    .flower-border {
+      padding: 8px 0;
+      text-align: center;
+      font-size: 24px;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, #FFF0F3, #FFF9E6, #F0FFF0, #F0F8FF, #FFF0F5);
     }
-    .rainbow-top span {
-      flex: 1;
-    }
-    .rainbow-top span:nth-child(1) { background: #FFB5BA; }
-    .rainbow-top span:nth-child(2) { background: #FFCBA4; }
-    .rainbow-top span:nth-child(3) { background: #FFF3A3; }
-    .rainbow-top span:nth-child(4) { background: #B8E6B8; }
-    .rainbow-top span:nth-child(5) { background: #A8D8EA; }
-    .rainbow-top span:nth-child(6) { background: #D4A5D9; }
     
-    /* Header with Characters - BIG */
+    /* Header with Characters */
     .header {
       background: linear-gradient(180deg, #FFF9FC 0%, #FFF 100%);
-      padding: 15px 10px 10px;
+      padding: 10px 10px 5px;
       text-align: center;
       position: relative;
     }
     
-    /* Floating Daisies */
-    .daisy {
+    /* Floating Flowers */
+    .flower {
       position: absolute;
-      animation: float 3s ease-in-out infinite;
+      animation: sway 3s ease-in-out infinite;
     }
-    .daisy-1 { top: 10px; left: 10px; font-size: 28px; }
-    .daisy-2 { top: 8px; right: 12px; font-size: 32px; animation-delay: 0.5s; }
-    .daisy-3 { top: 50px; left: 25px; font-size: 20px; animation-delay: 1s; }
-    .daisy-4 { top: 45px; right: 30px; font-size: 24px; animation-delay: 1.5s; }
     
-    @keyframes float {
-      0%, 100% { transform: translateY(0) rotate(-5deg); }
-      50% { transform: translateY(-6px) rotate(5deg); }
+    .f1 { top: 5px; left: 8px; font-size: 35px; }
+    .f2 { top: 0; right: 10px; font-size: 40px; animation-delay: 0.3s; }
+    .f3 { top: 60px; left: 5px; font-size: 28px; animation-delay: 0.6s; }
+    .f4 { top: 55px; right: 8px; font-size: 32px; animation-delay: 0.9s; }
+    .f5 { top: 110px; left: 15px; font-size: 24px; animation-delay: 1.2s; }
+    .f6 { top: 105px; right: 20px; font-size: 26px; animation-delay: 1.5s; }
+    
+    @keyframes sway {
+      0%, 100% { transform: rotate(-8deg) scale(1); }
+      50% { transform: rotate(8deg) scale(1.05); }
     }
     
     /* BIG Characters */
@@ -66,39 +63,44 @@
       display: flex;
       justify-content: center;
       align-items: flex-end;
-      gap: 0;
-      margin-top: 5px;
+      position: relative;
+      z-index: 2;
     }
     
     .characters img {
-      height: 180px;
+      height: 190px;
       width: auto;
-      filter: drop-shadow(3px 5px 8px rgba(0,0,0,0.15));
+      filter: drop-shadow(3px 6px 10px rgba(0,0,0,0.12));
     }
     
     /* Name Section */
     .name-section {
-      padding: 15px 20px 10px;
+      padding: 12px 20px 8px;
       text-align: center;
-      background: linear-gradient(180deg, #FFF 0%, #FFFAF5 100%);
+      position: relative;
+    }
+    
+    /* Flower accents */
+    .name-flowers {
+      font-size: 20px;
+      letter-spacing: 8px;
+      margin-bottom: 5px;
     }
     
     .invite-text {
-      font-size: 13px;
+      font-size: 12px;
       color: #D4A5A5;
-      font-weight: 600;
-      letter-spacing: 2px;
+      font-weight: 700;
+      letter-spacing: 3px;
       text-transform: uppercase;
     }
     
     .name {
       font-family: 'Pacifico', cursive;
-      font-size: 46px;
-      background: linear-gradient(90deg, #FFB5BA, #FFCBA4, #B8E6B8, #A8D8EA, #D4A5D9);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      font-size: 50px;
+      color: #E88FAC;
       line-height: 1.1;
+      text-shadow: 2px 2px 4px rgba(232,143,172,0.2);
     }
     
     .age-row {
@@ -110,17 +112,26 @@
     }
     
     .age {
-      width: 55px;
-      height: 55px;
+      width: 58px;
+      height: 58px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #FFB5BA, #FFCBA4);
+      background: linear-gradient(135deg, #FFDEE6, #FFB6C8);
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: 'Pacifico', cursive;
-      font-size: 32px;
+      font-size: 34px;
       color: #FFF;
-      box-shadow: 0 4px 12px rgba(255,181,186,0.4);
+      box-shadow: 0 4px 15px rgba(255,182,200,0.4);
+      position: relative;
+    }
+    
+    .age::before {
+      content: '🌸';
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      font-size: 18px;
     }
     
     .bday-text {
@@ -129,20 +140,24 @@
       font-weight: 700;
     }
     
-    /* Pool Badge */
+    /* Pool Badge with Flowers */
     .pool-badge {
-      background: linear-gradient(90deg, #A8D8EA, #87CEEB);
+      background: linear-gradient(90deg, #B8E8F0, #A0D8E8);
       color: #FFF;
       padding: 10px 20px;
-      margin: 12px 20px;
+      margin: 10px 20px;
       border-radius: 30px;
       font-weight: 700;
       font-size: 15px;
       text-align: center;
-      box-shadow: 0 3px 10px rgba(135,206,235,0.3);
+      box-shadow: 0 3px 12px rgba(160,216,232,0.35);
+      position: relative;
     }
     
-    /* Details - Compact */
+    .pool-badge::before { content: '🌼'; position: absolute; left: 12px; }
+    .pool-badge::after { content: '🌼'; position: absolute; right: 12px; }
+    
+    /* Details */
     .details {
       padding: 0 20px;
     }
@@ -152,29 +167,28 @@
       align-items: center;
       gap: 12px;
       padding: 10px 0;
-      border-bottom: 1px dashed #FFD1DC;
+      border-bottom: 2px dotted #FFE4EC;
     }
     
     .detail:last-child { border-bottom: none; }
     
     .detail-icon {
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 18px;
       flex-shrink: 0;
+      position: relative;
     }
     
-    .detail:nth-child(1) .detail-icon { background: #FFEEF0; }
-    .detail:nth-child(2) .detail-icon { background: #E8F8E8; }
-    .detail:nth-child(3) .detail-icon { background: #E8F4FC; }
+    .detail:nth-child(1) .detail-icon { background: #FFF0F3; }
+    .detail:nth-child(2) .detail-icon { background: #F0FFF4; }
+    .detail:nth-child(3) .detail-icon { background: #F0F8FF; }
     
-    .detail-text {
-      flex: 1;
-    }
+    .detail-text { flex: 1; }
     
     .detail-label {
       font-size: 10px;
@@ -190,19 +204,19 @@
       font-weight: 600;
     }
     
-    .highlight { color: #E091A3; }
+    .highlight { color: #E88FAC; font-weight: 700; }
     
-    /* Bring Section - Inline */
+    /* Bring Section */
     .bring {
-      background: #FFFBF0;
-      border: 2px dashed #FFD4A3;
-      border-radius: 12px;
-      padding: 12px;
-      margin: 15px 20px;
+      background: #FFFBF5;
+      border: 2px dashed #FFD4B8;
+      border-radius: 15px;
+      padding: 12px 15px;
+      margin: 12px 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 20px;
+      gap: 15px;
     }
     
     .bring-label {
@@ -213,65 +227,66 @@
     
     .bring-items {
       display: flex;
-      gap: 15px;
+      gap: 12px;
+      font-size: 26px;
     }
     
-    .bring-item {
-      text-align: center;
-      font-size: 24px;
-    }
-    
-    /* Footer Rainbow */
+    /* Flower Footer */
     .footer {
-      background: linear-gradient(90deg, #FFB5BA, #FFCBA4, #FFF3A3, #B8E6B8, #A8D8EA, #D4A5D9);
+      background: linear-gradient(180deg, #FFF 0%, #FFF5F8 100%);
       padding: 15px;
       text-align: center;
-      margin-top: 10px;
     }
     
     .footer p {
-      color: #FFF;
+      color: #E88FAC;
       font-weight: 700;
       font-size: 16px;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
     }
     
-    .footer-daisies {
-      margin-top: 5px;
-      font-size: 20px;
-      letter-spacing: 5px;
+    .footer-flowers {
+      margin-top: 8px;
+      font-size: 28px;
+      letter-spacing: 3px;
     }
     
-    /* Mobile Optimisation */
+    /* Flower border bottom */
+    .flower-border-bottom {
+      padding: 10px 0;
+      text-align: center;
+      font-size: 22px;
+      letter-spacing: 0;
+      background: linear-gradient(90deg, #FFF0F3, #FFF9E6, #F0FFF0, #F0F8FF, #FFF0F5);
+    }
+    
+    /* Mobile */
     @media (max-width: 500px) {
-      .characters img { height: 160px; }
-      .name { font-size: 40px; }
-      .age { width: 50px; height: 50px; font-size: 28px; }
-      .bday-text { font-size: 18px; }
+      .characters img { height: 170px; }
+      .name { font-size: 44px; }
     }
     
     @media (max-width: 380px) {
-      .characters img { height: 140px; }
-      .name { font-size: 36px; }
-      .detail { padding: 8px 0; }
-      .detail-icon { width: 35px; height: 35px; font-size: 16px; }
+      .characters img { height: 150px; }
+      .name { font-size: 38px; }
+      .age { width: 50px; height: 50px; font-size: 28px; }
+      .flower { font-size: 80% !important; }
     }
   </style>
 </head>
 <body>
   <div class="invitation">
     
-    <!-- Rainbow Stripe Top -->
-    <div class="rainbow-top">
-      <span></span><span></span><span></span><span></span><span></span><span></span>
-    </div>
+    <!-- Flower Border Top -->
+    <div class="flower-border">🌸🌼🌷🌻🌸🌼🌷🌻🌸🌼🌷</div>
     
     <!-- Header with BIG Characters -->
     <div class="header">
-      <span class="daisy daisy-1">🌼</span>
-      <span class="daisy daisy-2">🌸</span>
-      <span class="daisy daisy-3">🌸</span>
-      <span class="daisy daisy-4">🌼</span>
+      <span class="flower f1">🌸</span>
+      <span class="flower f2">🌼</span>
+      <span class="flower f3">🌷</span>
+      <span class="flower f4">🌻</span>
+      <span class="flower f5">🌺</span>
+      <span class="flower f6">🌸</span>
       
       <div class="characters">
         <img src="https://www.bluey.tv/wp-content/uploads/2019/04/char-bluey@2x.png" alt="Bluey">
@@ -281,6 +296,7 @@
     
     <!-- Name & Age -->
     <div class="name-section">
+      <div class="name-flowers">🌼🌸🌼🌸🌼</div>
       <p class="invite-text">You're invited to</p>
       <h1 class="name">Atalina's</h1>
       <div class="age-row">
@@ -321,19 +337,22 @@
     
     <!-- Bring Items -->
     <div class="bring">
-      <span class="bring-label">Please bring:</span>
+      <span class="bring-label">🌸 Please bring:</span>
       <div class="bring-items">
-        <span class="bring-item" title="Togs">🩱</span>
-        <span class="bring-item" title="Towel">🏖️</span>
-        <span class="bring-item" title="Sunscreen">☀️</span>
+        <span title="Togs">🩱</span>
+        <span title="Towel">🏖️</span>
+        <span title="Sunscreen">☀️</span>
       </div>
     </div>
     
     <!-- Footer -->
     <div class="footer">
       <p>🐕 Let's have a Wackadoo time! 🐕</p>
-      <div class="footer-daisies">🌼🌸🌼🌸🌼</div>
+      <div class="footer-flowers">🌸🌼🌷🌻🌺🌷🌼🌸</div>
     </div>
+    
+    <!-- Flower Border Bottom -->
+    <div class="flower-border-bottom">🌷🌸🌼🌻🌺🌸🌼🌷🌻🌺🌸</div>
     
   </div>
 </body>
