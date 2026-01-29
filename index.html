@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atalina Turns 5</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@700;900&display=swap" rel="stylesheet">
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family:'Nunito', sans-serif;
+  background:#dff6ff;
+}
+
+/* Wrapper */
+.invite {
+  max-width:420px;
+  margin:0 auto;
+  background:white;
+  overflow:hidden;
+  border-radius:24px;
+}
+
+/* HERO */
+.hero {
+  background:linear-gradient(#42A5F5,#4DD0E1);
+  text-align:center;
+  padding:28px 20px 60px;
+  position:relative;
+}
+
+.hero h1 {
+  font-family:'Fredoka One';
+  color:white;
+  font-size:34px;
+  text-shadow:3px 3px #1565C0;
+}
+
+.hero p {
+  color:#FFEB3B;
+  font-weight:900;
+}
+
+/* Floating characters */
+.hero-crew {
+  position:absolute;
+  bottom:-30px;
+  left:0;
+  right:0;
+  display:flex;
+  justify-content:center;
+  gap:10px;
+}
+
+.hero-crew img {
+  height:80px;
+  animation:bounce 1.3s infinite ease-in-out;
+}
+
+.hero-crew img:nth-child(2){animation-delay:.2s}
+.hero-crew img:nth-child(3){animation-delay:.4s}
+.hero-crew img:nth-child(4){animation-delay:.6s}
+
+@keyframes bounce {
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+}
+
+/* NAME */
+.name-block {
+  text-align:center;
+  padding:70px 20px 30px;
+}
+
+.name {
+  font-family:'Fredoka One';
+  font-size:44px;
+  color:#1E88E5;
+}
+
+.age {
+  font-family:'Fredoka One';
+  font-size:90px;
+  color:#FF9800;
+  line-height:1;
+}
+
+/* SECTION BASE */
+.section {
+  padding:28px 20px;
+  position:relative;
+}
+
+.section img.character {
+  position:absolute;
+  height:90px;
+}
+
+/* POOL PARTY */
+.pool {
+  background:#26C6DA;
+  color:white;
+  text-align:center;
+  font-family:'Fredoka One';
+  font-size:22px;
+}
+
+.pool img.character {
+  right:10px;
+  bottom:-20px;
+}
+
+/* INFO */
+.info {
+  background:#fff;
+}
+
+.info img.character {
+  left:10px;
+  top:-30px;
+}
+
+.card {
+  background:#f9f9f9;
+  border-radius:18px;
+  padding:16px;
+  margin-top:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.card strong {
+  display:block;
+  font-size:12px;
+  color:#1E88E5;
+}
+
+.card span {
+  font-size:18px;
+  font-weight:900;
+}
+
+/* BRING */
+.bring {
+  background:#E3F2FD;
+  border-top:4px dashed #42A5F5;
+  text-align:center;
+}
+
+.bring img.character {
+  right:12px;
+  top:-40px;
+}
+
+.bring p {
+  font-size:20px;
+  font-weight:900;
+  color:#1565C0;
+  margin-bottom:10px;
+}
+
+.bring-icons {
+  display:flex;
+  justify-content:center;
+  gap:30px;
+}
+
+.bring-icons div {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  font-size:34px;
+}
+
+.bring-icons span {
+  font-size:12px;
+  font-weight:900;
+}
+
+/* FOOTER */
+.footer {
+  background:#FF9800;
+  color:white;
+  text-align:center;
+  padding:30px 20px;
+  position:relative;
+}
+
+.footer img {
+  height:70px;
+  margin-top:12px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="invite">
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>YOU'RE INVITED!</h1>
+    <p>Come and play for real life</p>
+
+    <div class="hero-crew">
+      <img src="https://www.bluey.tv/wp-content/uploads/2023/07/SCALED-BANDIT.png">
+      <img src="https://www.bluey.tv/wp-content/uploads/2023/07/SCALED-CHILLI.png">
+      <img src="https://www.bluey.tv/wp-content/uploads/2019/04/char-bluey@2x.png">
+      <img src="https://www.bluey.tv/wp-content/uploads/2023/07/SCALED-BINGO.png">
+    </div>
+  </div>
+
+  <!-- NAME -->
+  <div class="name-block">
+    <div class="name">Atalina</div>
+    <div class="age">5</div>
+  </div>
+
+  <!-- POOL -->
+  <div class="section pool">
+    💦 BLUEY POOL PARTY 💦
+    <img class="character" src="https://www.bluey.tv/wp-content/uploads/2019/04/char-bluey@2x.png">
+  </div>
+
+  <!-- INFO -->
+  <div class="section info">
+    <img class="character" src="https://www.bluey.tv/wp-content/uploads/2023/07/SCALED-BANDIT.png">
+
+    <div class="card">
+      <strong>WHEN</strong>
+      <span>Saturday 3 March<br>2:00pm</span>
+    </div>
+
+    <div class="card">
+      <strong>WHERE</strong>
+      <span>Naenae Swimming Pools<br>Lower Hutt</span>
+    </div>
+
+    <div class="card">
+      <strong>RSVP BY 28 FEB</strong>
+      <span>Your phone or email</span>
+    </div>
+  </div>
+
+  <!-- BRING -->
+  <div class="section bring">
+    <img class="character" src="https://www.bluey.tv/wp-content/uploads/2023/07/SCALED-BINGO.png">
+    <p>Please bring</p>
+
+    <div class="bring-icons">
+      <div>🩱<span>Togs</span></div>
+      <div>🏖️<span>Towel</span></div>
+      <div>☀️<span>Sun</span></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <h2>Hooray! Let’s play!</h2>
+    <p>We can’t wait to see you</p>
+    <img src="https://www.bluey.tv/wp-content/uploads/2023/07/SCALED-CHILLI.png">
+  </div>
+
+</div>
+
+</body>
+</html>
